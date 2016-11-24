@@ -21,6 +21,7 @@ void emit(void) {
 }
 
 void wait_signal(void) {
+    // wait会释放mutex_t
     pthread_cond_wait(&cond_t, &mutex_t);
     puts("emmited");
 }
